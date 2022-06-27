@@ -17,7 +17,7 @@ git remote add makefile https://github.com/sacloud/makefile.git
 #### 追加(初回のみ)
 
 ```bash
-git subtree add --prefix=includes --squash makefile v0.0.1
+git subtree add --prefix=includes --squash makefile v0.0.3
 ```
 
 利用する側のプロジェクトではMakefileを以下のように記述します。
@@ -33,14 +33,15 @@ DEFAULT_GOALS  ?= fmt set-license go-licenses-check goimports lint test build
 include includes/go/common.mk
 include includes/go/simple.mk
 
-# toolsゴールを追加(sacloudプロダクト向け日次CIを行うプロジェクトでは必須)
-tools: dev-tools
+# ゴールを追加
+default: $(DEFAULT_GOALS)
+tools: dev-tools # toolsゴールはsacloudプロダクト向け日次CIを行うプロジェクトでは必須
 ```
 
 #### 更新
 
 ```bash
-git subtree pull --prefix=includes --squash makefile v0.0.1
+git subtree pull --prefix=includes --squash makefile v0.0.3
 ```
 
 ## License
