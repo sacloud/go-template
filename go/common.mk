@@ -22,7 +22,7 @@ DEFAULT_GOALS           ?= fmt set-license go-licenses-check goimports lint test
 GOLANG_CI_LINT_VERSION  ?= v1.46.2
 TEXTLINT_ACTION_VERSION ?= v0.0.1
 
-default: $(DEFAULT_GOALS)
+.DEFAULT_GOAL = default
 
 .PHONY: test
 test:

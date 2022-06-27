@@ -36,3 +36,5 @@ $(BIN): $(GO_FILES) go.mod go.sum
 clean:
 	@echo "cleaning..."
 	rm -rf $(BIN)
+
+DEFAULT_GOALS += build
