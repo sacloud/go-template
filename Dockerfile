@@ -1,4 +1,4 @@
-# Copyright 2022-2025 The sacloud/go-template Authors
+# Copyright 2022-2026 The sacloud/go-template Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM golang:1.20 AS builder
+FROM golang:1.25.0 AS builder
 MAINTAINER Usacloud Authors <sacloud.users@gmail.com>
 
 RUN  apt-get update && apt-get -y install \
@@ -30,7 +30,7 @@ ENV CGO_ENABLED 0
 RUN make tools build
 # ======
 
-FROM alpine:3.16
+FROM alpine:3.23.0
 MAINTAINER Usacloud Authors <sacloud.users@gmail.com>
 
 RUN apk add --no-cache --update ca-certificates

@@ -25,7 +25,7 @@ git subtree add --prefix=includes --squash makefile v0.0.8
 ```makefile
 # 必要に応じて変数定義
 AUTHOR         ?= The sacloud/example Authors
-COPYRIGHT_YEAR ?= 2022
+COPYRIGHT_YEAR ?= 2026
 BIN            ?= example
 DEFAULT_GOALS  ?= fmt set-license go-licenses-check goimports lint test build
 
@@ -46,7 +46,7 @@ git subtree pull --prefix=includes --squash makefile v0.0.8
 
 ## License
 
-`sacloud/makefile` Copyright (C) 2022-2023 The sacloud/makefile Authors.
+`sacloud/makefile` Copyright (C) 2022-2026 The sacloud/makefile Authors.
 
 This project is published under [Apache 2.0 License](LICENSE).
 
