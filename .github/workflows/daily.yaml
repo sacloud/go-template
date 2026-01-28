@@ -12,6 +12,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, windows-latest, ubuntu-latest, ubuntu-24.04, ubuntu-22.04]
+        go-version: [stable, oldstable]
     steps:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
@@ -22,7 +23,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@d35c59abb061a4a6fb18e82ac0862c26744d6ab5 # v5.5.0
         with:
-          go-version-file: 'go.mod'
+          go-version: ${{ matrix['go-version'] }}
 
       - name: Setup tools
         run: | 
