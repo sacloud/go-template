@@ -18,5 +18,13 @@ updates:
       time: "00:00"
     commit-message:
       prefix: "go:"
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: daily
+      time: "00:00"
+    commit-message:
+      prefix: "docker:"
     cooldown:
       default-days: 7
