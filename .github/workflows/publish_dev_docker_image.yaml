@@ -8,6 +8,11 @@ jobs:
   push_to_registry:
     name: Push Docker image to GitHub Container Registry(dev)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
     steps:
       -
         name: Check out the repo
