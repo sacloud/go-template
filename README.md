@@ -28,10 +28,8 @@ find . -type f | xargs sed -i '' -e "s/go-template/example/g"
 
 ### DockerイメージをGitHub Container Registryで公開する際の注意点
 
-デフォルトでは`CR_PAT`が渡されないためGitHub Actionsでのイメージのビルド/プッシュに失敗します。
-また、パッケージを公開したい場合は初回のみ手作業が必要です。
-
-このためDockerイメージをGitHub Container Registryで公開したい場合はオーガニゼーション管理者にご相談ください。
+DockerイメージをGitHub Container Registryで公開したい場合はオーガニゼーション管理者にご相談ください。
+パッケージを公開したい場合は初回のみ手作業が必要です。
 
 ## License
 
